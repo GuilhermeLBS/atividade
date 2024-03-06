@@ -1,0 +1,154 @@
+*
+{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    position: relative;
+}
+html
+{
+    scroll-behavior: smooth;
+}
+body
+{
+    background-color: whitesmoke;
+    display: flex;
+    justify-content: center;
+}
+body::-webkit-scrollbar
+{
+    width: 6px;
+    
+}
+body::-webkit-scrollbar-thumb
+{
+    border-radius: 10px;
+    background-color: lightgray;
+}
+main
+{
+    width: 1120px;
+}
+header
+{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 5px 20px;
+    height: 120px;
+    position: fixed;
+    top: 0;
+    z-index: 999;
+    background-color: #fcfbff;
+    box-shadow: 0 2px 0 #ececec;
+    max-width: 1120px;
+    width: 100%;
+}
+nav-list
+{
+    gap: 30px;
+    display: flex;
+}
+a
+{
+    cursor: pointer;
+    text-decoration: none;
+    color: black;
+
+}
+section#home
+{
+    height: calc(100vh + 80px);
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    padding: 5px 20px;
+    width: 100%;
+}
+.home-info
+{
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    text-align: justify;
+}
+.home-info button
+{
+    border: none;
+    width: 150px;
+    padding: 10px;
+    background-color: rgb(101, 101, 209);
+    color: whitesmoke;
+    font-size: 18px;
+    cursor: pointer;
+    opacity: 0.9;
+    border-radius: 15px;
+
+}
+.home-info button a
+{
+    color: white;
+}
+.home-info button:hover
+{
+    opacity: 1;
+}
+#contact
+{
+    height: calc(100vh + 80px );
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    gap: 30px;
+}
+#contact form
+{
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    max-width: 400px;
+    width: 100%;
+    padding: 5px 20px;
+}
+input, textarea, button
+{
+    box-shadow: 0 1px 2px #ddd;
+    border: none;
+    padding: 10px;
+    border-radius: 8px;
+    outline: none;
+    resize: none;
+}
+#contact form button
+{
+    background-color: rgb(101, 101, 209);
+    color: white;
+    font-size: 18px;
+    cursor: pointer;
+    opacity: 0.9;
+}
+#contact form button:hover
+{
+    opacity: 1;
+}
+@media (max-width: 450px)
+{
+    header{
+        justify-content: center;
+    }
+    .logo{
+        display: none;
+    }
+    section#home{
+        flex-direction: column-reverse;
+        justify-content: center;
+    }
+    .home-info{
+        width: 100%;
+        padding: 10px;
+        
+    }
+}
